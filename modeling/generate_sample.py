@@ -8,8 +8,6 @@
 #               please read AM_analysis.py and MM_analysis.py for further details.
 # --------------------------------------------------------------------------------------------------------------------
 
-
-import argparse
 import pandas as pd
 import numpy as np
 from handles.data_hand import create_factor_arr

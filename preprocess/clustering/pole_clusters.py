@@ -16,7 +16,6 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-
 # load the config file
 import json
 config = json.load(open('config.json'))

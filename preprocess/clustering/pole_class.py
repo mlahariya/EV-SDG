@@ -3,8 +3,6 @@ import os
 from sklearn.cluster import DBSCAN
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from handles.data_hand import get_csv_data
 
 # load the config file
@@ -52,8 +50,8 @@ class pole:
         print('Epsilon :', ep, ' ; Minimum Samples :', min_samples, ' ; Clusters :', np.unique(labels))
         return labels
 
-    def bplot(self,X,Y,ID,data):
-        plot_data = data.melt(id_vars=ID, var_name=X, value_name=Y)
-        # plot_data=pd.melt(aaaa,id_vars=['Day_type'],value_vars=['Pole_clusters'],var_name='Pole_Clusters')
-        sns.boxplot(x=X, y=Y, data=plot_data, hue=ID)
-        return plt
+    # def bplot(self,X,Y,ID,data):
+    #     plot_data = data.melt(id_vars=ID, var_name=X, value_name=Y)
+    #     # plot_data=pd.melt(aaaa,id_vars=['Day_type'],value_vars=['Pole_clusters'],var_name='Pole_Clusters')
+    #     sns.boxplot(x=X, y=Y, data=plot_data, hue=ID)
+    #     return plt

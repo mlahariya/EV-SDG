@@ -33,8 +33,6 @@ warnings.filterwarnings("ignore")
 # load the config file
 import json
 
-
-
 def main(args):
     # update the verbose of the fitting environment
     config = json.load(open('config.json'))

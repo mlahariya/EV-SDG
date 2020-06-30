@@ -22,8 +22,6 @@
 #           modelling: multiple scripts used to implement process
 # --------------------------------------------------------------------------------------------------------------------
 
-
-import argparse
 import numpy as np
 from modeling.stat.poles_selector import poles_selector
 from modeling.stat.poisson_process import poisson_process

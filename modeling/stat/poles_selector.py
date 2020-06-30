@@ -6,7 +6,6 @@
 
 import numpy as np
 import pandas as pd
-import random
 
 class poles_selector:
     def __init__(self,alldata,year):

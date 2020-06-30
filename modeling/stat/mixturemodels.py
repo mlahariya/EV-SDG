@@ -6,7 +6,6 @@
 
 import numpy as np
 import pandas as pd
-from termcolor import colored
 from scipy.optimize import minimize
 from scipy.stats import beta,norm
 from handles.data_hand import get_slotted_data
@@ -117,7 +116,7 @@ class mixture_optimizer():
         res = minimize(self.distance, self._final_unknowns, constraints=cons,
                        options= {'maxiter':1000,'disp':display})
         if not(res.success) and bool(verbose):
-            print(colored('FAILED','red'),': Optimization failed for ' +str(printer))
+            print(('FAILED','red'),': Optimization failed for ' +str(printer))
         self.optimization_result = res
         self._final_unknowns = res['x'].copy()
 

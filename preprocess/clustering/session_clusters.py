@@ -9,7 +9,6 @@
 # Support Script - preprocess/clustering/monthly_cluster_data_point.py
 # -------------------------------------------------------------------------------------------------------------------- #
 
-
 import pandas as pd
 from handles.data_hand import get_csv_data
 import os

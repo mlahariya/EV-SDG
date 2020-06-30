@@ -11,18 +11,9 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.gaussian_process import GaussianProcessRegressor
 import numpy as np
-from pomegranate.distributions import BetaDistribution
-from bayes_opt import BayesianOptimization
-import matplotlib.pyplot as plt
-import pymc3 as pm
-from scipy.special import gammaln
-from scipy.special import psi
-from math import factorial
-from scipy.optimize import fmin_l_bfgs_b as optim
 import math
 from scipy.optimize import newton
 from scipy.special import digamma
-import sys
 
 
 import pandas as pd
