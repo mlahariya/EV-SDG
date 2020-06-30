@@ -2,13 +2,14 @@
 #
 # Generate a sample of EV sessions data.
 #               This file can be used to generate the sample of a data using the saved SDG model.
-#                   - We pick the latest saved model
+#                   - User can choose between a default trained SDG model, or a latest model trained from a new dataset
 #                   - Each SDG model is a list of 3 models - AM,MMc and MMe
 #                       Arrival model, mixture model for connected time and mixture model for energy required
-#                   - Sample is generated for the given horizon.
-#
+#                   - Use can specify which AM to use.
+#                           - IAT: mean/poly/loses
+#                           - AC: poisson_fit/neg_bio_reg
+#                   - Sample is generated for the given horizon. horizon is defined by a starting and ending date
 #  dependencies: modeling.generate_sample.py
-
 # -------------------------------------------------------------------------------------------------------------------- #
 
 import glob

@@ -4,8 +4,8 @@
 # energy required
 #       AM: Arrival model. This is generated using the fit_models script.
 #           Required: slotted data file. prepared from the transactions file.
-#                       EP ~ mean, loess, poly
-#                       PP ~ neg_bio_reg, poisson_fit
+#                       IAT ~ mean, loess, poly
+#                       AC ~ neg_bio_reg, poisson_fit
 #       MMc/MMe: mixture models for connection time and required energy.
 #           Required: clustered data file. this is generated from the transcations data, which has,
 #                     session and pole clusters. these are inputs for the mixtures.
@@ -13,11 +13,6 @@
 #   IMP: run SDG_fit before running this file
 #
 #   dependencies: modelling.fit_models.py. This file implements the fitting for different models
-#                 preprocess.create_slot_data.py.  to covert transactions data file to slotted data file.
-#                 preprocess.prepare_clustered_data.py to generate session clusters, which will be used to create MMc and MMe
-#                 modelling.data_hand.import_data.py used to transfer files from preprocess to modelling res, and also
-#                   combine the session and pole cluster and ts data.
-#                 modeling.data_hand.py for multiple extra functions to do operations on model/data
 # -------------------------------------------------------------------------------------------------------------------- #
 
 import argparse

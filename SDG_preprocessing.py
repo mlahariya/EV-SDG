@@ -12,7 +12,11 @@
 #      However, time series data is created for all years.
 #    : Please make sure that transactions file (real world raw data file) is present on root directory and
 #      has the following columns
-#       --- TBD
+#       Column name     | Description                               | Data format
+#       Started         | Starting date and time of the EV session  | datetime (dd/mm/YYY HH:MM:SS)
+#       ConnectedTime   | Connection time of the EV session         | Hours (float)
+#       TotalEnergy     | Requested energy of the EV session        | kWh (float)
+#       ChargePoint     | Charging station                          | Categorical (str)
 #
 # -------------------------------------------------------------------------------------------------------------------- #
 
