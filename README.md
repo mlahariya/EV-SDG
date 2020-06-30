@@ -116,7 +116,7 @@ ConnectedTime | Connection time of the EV session | Hours (float)
 TotalEnergy | Requested energy of the EV session | kWh (float)
 ChargePoint | Charging station | Categorical (str) 
 
-####Pre processing : 
+#### Pre processing
 
 We clean the data and prepare preprocessed data using [preprocess](preprocess) module. 
 Command line script `/SDG_preprocessing.py` can be used to create the preprocessed datasets. 
