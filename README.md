@@ -16,13 +16,7 @@ Lahariya, Manu and Benoit, Dries and Develder, Chris (2020).
 Title
 Publication
 
-<img src="https://idlab.technology/assets/img/logo.jpg" width="100">
-<img src="https://styleguide.ugent.be/files/uploads/logo_UGent_EN_RGB_2400_kleur_witbg.png" width="50">
-
-Developed in [UGent, IDlab](https://www.ugent.be/ea/idlab/en). 
-
-
-## Citation
+#### Citation
 ```
 @inproceedings{10.1145/3396851.3403509,
 author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
@@ -45,11 +39,13 @@ author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
     pages = {}
 }
 ```
+<img src="https://idlab.technology/assets/img/logo.jpg" width="100"> <img src="https://styleguide.ugent.be/files/uploads/logo_UGent_EN_RGB_2400_kleur_witbg.png" width="50">
+
+Developed in [UGent, IDlab](https://www.ugent.be/ea/idlab/en). 
 
 
 
-
-### Session data generation
+### EV sessions data generation
 A sample of EV sessions data can be generated using the python script `/SDG_sample_generate.py`. Generate_sample() can be used 
 to generate and save samples to [/res/generated samples](/res/generated samples). 
 
@@ -68,7 +64,7 @@ Models fitted on a real world data will be used as default SDG models for genera
 These models are saved in [modeling/default_models/saved_models]([modeling/default_models/saved_models]). 
 Generated EV sessions data will be saved on the [res/generated_samples]([res/generated_samples]) folder. Please refer to  `SDG_sample_generate.py` for futher details. 
 
-#### Command line arguments for SDG_sample_generate.py
+##### Command line arguments for SDG_sample_generate.py
 
 ```
 optional arguments:
@@ -111,66 +107,52 @@ Default models for all possible methods of modeling for AM are provided and can 
 
 ### Model fitting
 
-To train the models, a Transactions.csv file needs to be saved in the 
-root directory. This file must have the raw data that is required to train the model.
-The required columns in the this file are *Meter Start, Meter stop, Connection time, Energy, Charge point, lat (optional) and lon (optional)*.
+To train the models, a real world data set is required. following columns are necessary in this real world EV sessions data.
 
-This data will be used to fit an SDG model. `/SDG_fit.py` has the code for fitting the model.
-We also the models in [/res/modeling/models](/res/modeling/models) with a timestamp for future use. We save 
-the SDG model as a list. 
+Column name | Description | Data format
+--- | --- | ---
+Started | Starting date and time of the EV session | datetime (dd/mm/YYY HH:MM:SS)
+ConnectedTime | Connection time of the EV session | Hours (float)
+TotalEnergy | Requested energy of the EV session | kWh (float)
+ChargePoint | Charging station | Categorical (str) 
 
-```python
-SDG_model = list([AM,MMc,MMe])
-SDG_model = [remove_raw_data(m) for m in SDG_model]
-```
+####Pre processing : 
 
-**Important:** We save the SDG after removing all the training data that was used to train model,
-this is done to protect the confidentiality of the data. (Implemented using *remove_raw_data()* function)
+We clean the data and prepare preprocessed data using [preprocess](preprocess) module. 
+Command line script `/SDG_preprocessing.py` can be used to create the preprocessed datasets. 
+Running this script will generate a 'slotted data' and a 'preprocessed data file'. 
 
-
-### Pre-processing and analysis of models.
-
-*Pre processing* : 
-
-We study the raw data. This can be found in the `/preprocessing.py`. We create
-the session clusters and pole clusters. plot the important distributions, generate the slotted data,
-generate time series data from the raw data file that needs to be placed in the root directory. 
-
-* save the transactions.csv in root directory
-* run `/preprocessing.py` (supporting module `/preprocess` )
+* save the raw data file in a folder
+* run `/SDG_preprocessing.py` (supporting module `/preprocess` )
 * Please see [res/preprocess](res/preprocess) for generated plots and pre processed data.
+
+##### Command line arguments for SDG_preprocess.py
+
+```
+optional arguments:
+  -h, --help            show this help message and exit
+  -Year YEAR            Year for modeling (integer)
+  -Slotmins SLOTMINS    Minutes in each timeslot (integer)
+  -create_plots CREATE_PLOTS
+                        indicator for creating plots
+  -Sessions_filename SESSIONS_FILENAME
+                        Name of the file contaning raw data. This file must be
+                        present in /res folder (str)
+  -res_folder RES_FOLDER
+                        Locaiton for raw data file. default is "/res" inside
+                        this directoryEV sessions files must be present here
+                        (string)
+  -verbose VERBOSE      0 to print nothing; >0 values for printing more
+                        information. Possible values:0,1,2,3 (integer)
+```
  
-*Analysis of model parameters* :
+IMP: Please do not forget to give the file name and file location while calling this script
 
-A complete analysis of the build models is done using `/Arr_time_model.py` and
-`/dep_time_model.py`. We study modeling methods for lambda for arrival models, and
-mixture types and optimization methods for mixture models.
+IMP: This file should be run before `/SDG_fit.py` (used for training models)
 
-* Please see [res/modeling](res/modeling) for further details and generated samples
-
-
-
-## References 
-
-
+IMP: Don't forget to install the packages in requirements.txt 
+(`pip install -r requirements.txt`)
  
-for preprocessing and fitting the real world data, and also code for generating data using the SDG.  Each model is made 
-of the following three components
+#### Training SDG models
 
-pip install -r requirements.txt
 
-* Arrival model (AM) - An exponential process/poisson process based model
-to generate arrivals of EVs for a given horizon
-* Connected time model (MMc)  - a GMMs based model for connected times
-* Energy required model (MMe) - a GMMs based model for required energy
-
-All the models are implemented in [modeling/stat](modeling/stat) directory. 
-The analysis of different parameters of models is also performed. This is present in 
-`/arr_time_model.py` and `/dep_time_model.py`.
-
-We also perform perprocessing on the transactions data to study the statistical 
-properties of the real world data. Including generating session clusters/pole clusters.
-These processes are implemented in [preprocess](preprocess) directory.
-For further details, please see `/preprocessing.py`
-
- 
