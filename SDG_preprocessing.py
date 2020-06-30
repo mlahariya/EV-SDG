@@ -44,10 +44,6 @@ def main(args):
     from preprocess.prepare_clustered_data import create_processed_data
     create_processed_data()
 
-    # # generate time series data file. # TAKES TIME!
-    # from preprocess.prepare_ts_analysis import create_ts_data
-    # create_ts_data()
-
 
 
 if __name__ == '__main__':
