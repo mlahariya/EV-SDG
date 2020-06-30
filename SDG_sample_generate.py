@@ -22,8 +22,7 @@ config = json.load(open('config.json'))
 
 def main(args):
     # here we can specify the horizon for data generation
-    name =config['dir_names']['generated_samples_name']
-    os.makedirs(config['dir_names'][name], exist_ok=True)
+    os.makedirs(config['dir_names']['generated_samples_name'], exist_ok=True)
     try:
         horizon_start = datetime.datetime.strptime(str(args['start_date']), '%d/%m/%Y')
         horizon_end = datetime.datetime.strptime(str(args['end_date']), '%d/%m/%Y')
