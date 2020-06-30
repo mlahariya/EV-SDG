@@ -124,7 +124,7 @@ Running this script will generate a 'slotted data' and a 'preprocessed data file
 
 * save the raw data file in a folder
 * run `/SDG_preprocessing.py` (supporting module `/preprocess` )
-* Please see [res/preprocess](res/preprocess) for generated plots and pre processed data.
+* Please see [res/preprocess](/res/preprocess) for generated plots and pre processed data.
 
 ##### Command line arguments for SDG_preprocess.py
 
