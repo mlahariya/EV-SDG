@@ -23,7 +23,7 @@ Developed in [UGent, IDlab](https://www.ugent.be/ea/idlab/en).
 
 
 ## Citation
-```python
+```
 @inproceedings{10.1145/3396851.3403509,
 author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
     title = {Defining a Synthetic Data Generator for Realistic Electric Vehicle Charging Sessions},
@@ -70,7 +70,7 @@ Generated EV sessions data will be saved on the [res/generated_samples]([res/gen
 
 #### Command line arguments for SDG_sample_generate.py
 
-```python
+```
 optional arguments:
   -h, --help            show this help message and exit
   -start_date START_DATE
