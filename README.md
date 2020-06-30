@@ -3,6 +3,8 @@ Synthetic data generator(SDG) for EV sessions data. This repository has the code
 for preprocessing and fitting the real world data, and also code for generating data using the SDG.  Each model is made 
 of the following three components
 
+pip install -r requirements.txt
+
 * Arrival model (AM) - An exponential process/poisson process based model
 to generate arrivals of EVs for a given horizon
 * Connected time model (MMc)  - a GMMs based model for connected times
