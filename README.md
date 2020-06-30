@@ -155,4 +155,18 @@ IMP: Don't forget to install the packages in requirements.txt
  
 #### Training SDG models
 
+`/SDG_fit.py` can be used to fit the SDG models. 
 
+##### Command line arguments for SDG_fit.py
+```
+optional arguments:
+  -h, --help            show this help message and exit
+  -model MODEL          modeling method to be used for modeling arrival times:
+                        AC for arrival count models IAT for inter-arrival time
+                        models
+  -lambdamod LAMBDAMOD  Method to be used for modeling lambda: AC: has two
+                        options, poisson_fit/neg_bio_reg IAT: has three
+                        options, mean/loess/poly
+  -verbose VERBOSE      0 to print nothing; >0 values for printing more
+                        information. Possible values:0,1,2,3 (integer)
+```
