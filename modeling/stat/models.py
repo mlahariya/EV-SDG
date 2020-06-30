@@ -73,7 +73,7 @@ def best_poly_fit(y,x,max_deg,verbose=1, scoring = 'neg_root_mean_squared_error'
     #               'linearregression__normalize': [True, False]}
 
     param_grid = {'polynomialfeatures__degree': np.arange(max_deg)}
-
+    if verbose==0: verbose = 1
     poly_grid = GridSearchCV(PolynomialRegression(), param_grid,
                              cv=10,
                              scoring=scoring,

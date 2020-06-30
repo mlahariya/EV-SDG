@@ -360,11 +360,10 @@ class mixture_models:
 
         return sample*self.scale
 
-    def predict_day(self, X_test, arrivals, slot):
+    def predict_day(self, X_test, arrivals, slot,verbose=0):
 
         # here we generate a days time series
-        print('Generating time series for :',X_test)
-        print('Generating .... ')
+        if verbose > 2: print(' \t\t Sampling from MM for : ', str(np.array( X_test)[0][0]))
         arrivals = arrivals
         deps = []
         self.scale = 24
@@ -376,7 +375,5 @@ class mixture_models:
             dep = self.predict_mix(f1=np.array(X_test),f2=t_now_slot)
 
             deps.append(float(dep))
-
-        print('Generated !')
 
         return np.array(deps)

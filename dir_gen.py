@@ -25,6 +25,8 @@ def dir_create(folder_name):
     config['dir_names']['models_logs_folder_name'] = os.path.join(folder_name, 'models')
     config['dir_names']['models_folder_name'] = os.path.join(folder_name, 'models/saved_models')
 
+    config['dir_names']['generated_samples_name'] = os.path.join(folder_name, 'generated_samples')
+
 
     # dirs_needed = [config.res_folder_name,
     #                config.preprocess_folder_name,

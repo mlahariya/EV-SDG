@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="c6846cc9-5206-4174-b0ae-67bc7e3b494c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDG_fit.py" beforeDir="false" afterPath="$PROJECT_DIR$/SDG_fit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDG_sample_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/SDG_sample_generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dir_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/dir_gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/default_models/SDG Model (EP,loess)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/default_models/SDG Model (EP,mean)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/default_models/SDG Model (EP,poly)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/default_models/SDG Model (PP,neg_bio_reg)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/default_models/SDG Model (PP,poisson_fit)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/generate_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeling/generate_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/predict_arrivals.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/stat/exponential_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeling/stat/exponential_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/stat/mixturemodels.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeling/stat/mixturemodels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/stat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeling/stat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/stat/poisson_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeling/stat/poisson_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/models/saved_models/SDG Model (EP,poly) DT=2020-06-23 00-10" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SDG_preprocessing">
+  <component name="RunManager" selected="Python.SDG_fit">
     <configuration name="SDG fit" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="datagen" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,8 +196,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SDG_preprocessing" />
         <item itemvalue="Python.SDG_fit" />
+        <item itemvalue="Python.SDG_preprocessing" />
         <item itemvalue="Python.SDG_sample_generate" />
         <item itemvalue="Python.fit_models" />
         <item itemvalue="Python.SDG fit" />
@@ -252,6 +268,8 @@
       <workItem from="1593434686972" duration="82000" />
       <workItem from="1593434818634" duration="258000" />
       <workItem from="1593435887504" duration="332000" />
+      <workItem from="1593439041450" duration="3078000" />
+      <workItem from="1593504927773" duration="5754000" />
     </task>
     <servers />
   </component>
@@ -334,6 +352,7 @@
     <SUITE FILE_PATH="coverage/datagen_dev$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1574972011557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datagen$monthly_cluster_data_points.coverage" NAME="monthly_cluster_data_points Coverage Results" MODIFIED="1571993455592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/clustring" />
     <SUITE FILE_PATH="coverage/SDG___EV_Sessions$SDG_fit.coverage" NAME="SDG fit Coverage Results" MODIFIED="1587664200258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EV_SDG$SDG_fit.coverage" NAME="SDG_fit Coverage Results" MODIFIED="1593441442190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SDG_EV_sessions_data$fit_models.coverage" NAME="fit_models Coverage Results" MODIFIED="1592851235190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeling" />
     <SUITE FILE_PATH="coverage/datagen_dev$eval.coverage" NAME="eval Coverage Results" MODIFIED="1578325813567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeling/stat" />
     <SUITE FILE_PATH="coverage/SDG_EV_sessions_data$dep_time_model.coverage" NAME="dep_time_model Coverage Results" MODIFIED="1592270764582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

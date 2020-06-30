@@ -45,7 +45,7 @@ def main(args):
     config = json.load(open('config.json'))            # IMP.
     model_dump_loc = config['dir_names']['models_folder_name']
     model_log_dump_loc = config['dir_names']['models_logs_folder_name']
-    process = str(args['Process'])
+    process = str(args['model'])
     lambda_mod = str(args['lambdamod'])
     dump_filename = 'SDG Model ('+str(process)+","+str(lambda_mod)+') DT=' + str(datetime.datetime.now().strftime("%Y-%m-%d %H-%M"))
 
@@ -96,11 +96,11 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments to SDG fit: \n '
                                                  'Creates a SDG model and saves it')
-    parser.add_argument('-Process', default='PP',
-                        help='Process to be used for modeling arrival times: \n'
+    parser.add_argument('-model', default='IAT',
+                        help='modeling method to be used for modeling arrival times: \n'
                              '\t\t AC for arrival count models \n'
                              '\t\t IAT for inter-arrival time models')
-    parser.add_argument('-lambdamod', default='poisson_fit',
+    parser.add_argument('-lambdamod', default='mean',
                         help='Method to be used for modeling lambda:\n'
                              '\t\t AC: has two options, poisson_fit/neg_bio_reg \n'
                              '\t\t IAT: has three options, mean/loess/poly')

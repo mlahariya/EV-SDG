@@ -439,11 +439,10 @@ class exponential_process:
         return float(scale), std
 
     def predict_day(self, X_test, Start_time, slot,
-                    year=None, poles=None, variablity_lambda=False):
+                    year=None, poles=None, variablity_lambda=False,verbose=0):
 
         # here we generate a days time series
-        print('Generating time series for :', X_test)
-        print('Generating .... ')
+        if verbose > 2: print(' \t\t Generating arrivals using fitted model for : ', str(np.array( X_test)[0][0]))
         t_now = Start_time
         ts = []
 
@@ -477,7 +476,5 @@ class exponential_process:
             t_diff = np.random.exponential(scale, size=1)
             # update t_now
             t_now = t_now + t_diff
-
-        print('Generated !')
 
         return np.array(ts), t_now, self._scale_min
