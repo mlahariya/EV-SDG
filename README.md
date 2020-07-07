@@ -68,23 +68,23 @@ Generated EV sessions data will be saved on the [res/generated_samples]([res/gen
 
 ```
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit
   -start_date START_DATE
-                        first date of the horizon for data generation format:
-                        dd/mm/YYYY
-  -end_date END_DATE    last date of the horizon for data generation format:
-                        dd/mm/YYYY
-  -use USE              which kind of models to use. "default" for using the
+                        First date of the horizon for data generation format:
+                        dd/mm/YYYY.
+  -end_date END_DATE    Last date of the horizon for data generation format:
+                        dd/mm/YYYY.
+  -use USE              Which kind of models to use. "default" for using the
                         default models "latest" for using the lastest trained
-                        models
-  -model MODEL          modeling method to be used for modeling arrival times:
+                        models.
+  -model MODEL          Modeling method to be used for modeling arrival times:
                         AC for arrival count models IAT for inter-arrival time
-                        models
+                        models.
   -lambdamod LAMBDAMOD  Method to be used for modeling lambda: AC: has two
                         options, poisson_fit/neg_bio_reg IAT: has three
-                        options, mean/loess/poly
+                        options, mean/loess/poly.
   -verbose VERBOSE      0 to print nothing; >0 values for printing more
-                        information. Possible values: 0, 1, 2, 3 (integer)
+                        information. Possible values: 0, 1, 2, 3. (integer)
 
 ```
 
@@ -160,13 +160,13 @@ IMP: Don't forget to install the packages in requirements.txt
 ##### Command line arguments for SDG_fit.py
 ```
 optional arguments:
-  -h, --help            show this help message and exit
-  -model MODEL          modeling method to be used for modeling arrival times:
+  -h, --help            Show this help message and exit.
+  -model MODEL          Modeling method to be used for modeling arrival times:
                         AC for arrival count models IAT for inter-arrival time
-                        models
+                        models.
   -lambdamod LAMBDAMOD  Method to be used for modeling lambda: AC: has two
                         options, poisson_fit/neg_bio_reg IAT: has three
-                        options, mean/loess/poly
+                        options, mean/loess/poly.
   -verbose VERBOSE      0 to print nothing; >0 values for printing more
-                        information. Possible values:0,1,2,3 (integer)
+                        information. Possible values: 0, 1, 2, 3. (integer)
 ```
