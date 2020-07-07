@@ -1,8 +1,8 @@
 # EV-SDG
 Electric vehicle (EV) - Synthetic data generator(SDG): Parametric models to generate synthetic samples of EV sessions data.
  
-This repository has.
-(i) Trained models that reflect real world dataset. They can be used to generate a synthetic sample of EV sessions dataset, and
+This repository has
+(i) Trained models that reflect real world dataset, which can be used to generate a synthetic sample of EV sessions, and
 (ii) Code to train SDG models from new data.
 
 ## References
@@ -41,7 +41,7 @@ author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
 ```
 <img src="https://idlab.technology/assets/img/logo.jpg" width="100"> <img src="https://styleguide.ugent.be/files/uploads/logo_UGent_EN_RGB_2400_kleur_witbg.png" width="50">
 
-Developed in [UGent, IDlab](https://www.ugent.be/ea/idlab/en). 
+Developed at [UGent, IDlab](https://www.ugent.be/ea/idlab/en). 
 
 
 
