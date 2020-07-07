@@ -55,14 +55,14 @@ from modeling.generate_sample import generate_sample
 
 AM,MMc,MMe = SDG[0],SDG[1],SDG[2]   # SDG = synthetic data generator
 
-generate_sample(AM=AM,MMc=MMc, MMe = MMe,
+generate_sample(AM=AM, MMc=MMc, MMe=MMe,
                 horizon_start=horizon_start,horizon_end=horizon_end)
 ```
 
 AM, MMc and MMe are the SDG models that needs to be passed as inputs. 
 Models fitted on a real world data will be used as default SDG models for generation.
 These models are saved in [modeling/default_models/saved_models]([modeling/default_models/saved_models]). 
-Generated EV sessions data will be saved on the [res/generated_samples]([res/generated_samples]) folder. Please refer to  `SDG_sample_generate.py` for futher details. 
+Generated EV sessions data will be saved on the [res/generated_samples]([res/generated_samples]) folder. Please refer to  `SDG_sample_generate.py` for further details. 
 
 ##### Command line arguments for SDG_sample_generate.py
 
@@ -84,7 +84,7 @@ optional arguments:
                         options, poisson_fit/neg_bio_reg IAT: has three
                         options, mean/loess/poly
   -verbose VERBOSE      0 to print nothing; >0 values for printing more
-                        information. Possible values:0,1,2,3 (integer)
+                        information. Possible values: 0, 1, 2, 3 (integer)
 
 ```
 
@@ -92,7 +92,7 @@ optional arguments:
 Default model specifications:
 
 * SDG:
-    * AM: Arrival models can be either inter-arrival time models(IAT) or arrival count(AV) models.
+    * AM: Arrival models can be either inter-arrival time models (IAT) or arrival count (AC) models.
         * IAT models: possible modeling methods for lambda are (i) mean, (ii) poly, and (iii) loess.
         * AC models: possible modeling methods for lambda are (i) poisson_fit (ii) neg_bio_reg
         
@@ -107,7 +107,7 @@ Default models for all possible methods of modeling for AM are provided and can 
 
 ### Model fitting
 
-To train the models, a real world data set is required. following columns are necessary in this real world EV sessions data.
+To train the models, a (real world) dataset is required. Following columns are necessary in this EV sessions data.
 
 Column name | Description | Data format
 --- | --- | ---
@@ -116,34 +116,34 @@ ConnectedTime | Connection time of the EV session | Hours (float)
 TotalEnergy | Requested energy of the EV session | kWh (float)
 ChargePoint | Charging station | Categorical (str) 
 
-#### Pre processing
+#### Preprocessing
 
 We clean the data and prepare preprocessed data using [preprocess](preprocess) module. 
-Command line script `/SDG_preprocessing.py` can be used to create the preprocessed datasets. 
-Running this script will generate a 'slotted data' and a 'preprocessed data file'. 
+The command line script `/SDG_preprocessing.py` can be used to create the preprocessed datasets. 
+Running this script will generate a `slotted data' and a `preprocessed data file'. 
 
-* save the raw data file in a folder
-* run `/SDG_preprocessing.py` (supporting module `/preprocess` )
+* Save the raw data file in a folder
+* Run `/SDG_preprocessing.py` (supporting module `/preprocess` )
 * Please see [res/preprocess](/res/preprocess) for generated plots and pre processed data.
 
 ##### Command line arguments for SDG_preprocess.py
 
 ```
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit
   -Year YEAR            Year for modeling (integer)
   -Slotmins SLOTMINS    Minutes in each timeslot (integer)
   -create_plots CREATE_PLOTS
-                        indicator for creating plots
+                        Indicator for creating plots
   -Sessions_filename SESSIONS_FILENAME
                         Name of the file contaning raw data. This file must be
-                        present in /res folder (str)
+                        present in the res_folder (str)
   -res_folder RES_FOLDER
-                        Locaiton for raw data file. default is "/res" inside
-                        this directoryEV sessions files must be present here
+                        Location for raw data file. Default is "/res". Inside
+                        this directory EV session files must be present. 
                         (string)
   -verbose VERBOSE      0 to print nothing; >0 values for printing more
-                        information. Possible values:0,1,2,3 (integer)
+                        information. Possible values: 0, 1, 2, 3. (integer)
 ```
  
 IMP: Please do not forget to give the file name and file location while calling this script
