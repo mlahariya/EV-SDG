@@ -76,19 +76,19 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments to SDG sample generate: \n '
-                                                 'Generates a sample of EV sessions data')
+                                                 'Generates a sample of EV sessions data.')
     parser.add_argument('-start_date',
-                        help='first date of the horizon for data generation \n'
-                             'format: dd/mm/YYYY')
+                        help='First date of the horizon for data generation. \n'
+                             'Format: dd/mm/YYYY')
     parser.add_argument('-end_date',
-                        help='last date of the horizon for data generation \n'
-                             'format: dd/mm/YYYY')
+                        help='Last date of the horizon for data generation. \n'
+                             'Format: dd/mm/YYYY')
     parser.add_argument('-use', default='default',
-                        help='which kind of models to use.  \n'
+                        help='Which kind of models to use.  \n'
                              '\t\t "default" for using the default models \n'
                              '\t\t "latest" for using the lastest trained models')
     parser.add_argument('-model', default='AC',
-                        help='modeling method to be used for modeling arrival times: \n'
+                        help='Modeling method to be used for modeling arrival times: \n'
                              '\t\t AC for arrival count models \n'
                              '\t\t IAT for inter-arrival time models')
     parser.add_argument('-lambdamod', default='poisson_fit',
@@ -96,7 +96,7 @@ if __name__ == '__main__':
                              '\t\t AC: has two options, poisson_fit/neg_bio_reg \n'
                              '\t\t IAT: has three options, mean/loess/poly')
     parser.add_argument('-verbose', default=3,
-                        help='0 to print nothing; >0 values for printing more information. Possible values:0,1,2,3 (integer)')
+                        help='0 to print nothing; >0 values for printing more information. Possible values: 0, 1, 2, 3. (integer)')
 
     args = parser.parse_args()
     main(vars(args))
