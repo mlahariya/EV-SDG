@@ -46,7 +46,7 @@ Developed at [UGent, IDlab](https://www.ugent.be/ea/idlab/en).
 
 
 ### EV sessions data generation
-A sample of EV sessions data can be generated using the python script `/SDG_sample_generate.py`. Generate_sample() can be used 
+A sample of EV sessions data can be generated using the python script `SDG_sample_generate.py`. Generate_sample() can be used 
 to generate and save samples to [/res/generated samples](/res/generated samples). 
 
 
@@ -126,7 +126,7 @@ Running this script will generate a `slotted data' and a `preprocessed data file
 * Run `/SDG_preprocessing.py` (supporting module `/preprocess` )
 * Please see [res/preprocess](/res/preprocess) for generated plots and pre processed data.
 
-##### Command line arguments for SDG_preprocess.py
+##### Command line arguments for SDG_preprocessing.py
 
 ```
 optional arguments:
@@ -139,7 +139,7 @@ optional arguments:
                         Name of the file contaning raw data. This file must be
                         present in the res_folder (str)
   -res_folder RES_FOLDER
-                        Location for raw data file. Default is "/res". Inside
+                        Location for raw data file. Default is "./res". Inside
                         this directory EV session files must be present. 
                         (string)
   -verbose VERBOSE      0 to print nothing; >0 values for printing more
@@ -155,7 +155,7 @@ IMP: Don't forget to install the packages in requirements.txt
  
 #### Training SDG models
 
-`/SDG_fit.py` can be used to fit the SDG models. 
+`SDG_fit.py` can be used to fit the SDG models. 
 
 ##### Command line arguments for SDG_fit.py
 ```
