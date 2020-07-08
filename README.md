@@ -78,12 +78,12 @@ optional arguments:
                         default models "latest" for using the lastest trained
                         models.
   -model MODEL          Modeling method to be used for modeling arrival times:
-                        AC for arrival count models IAT for inter-arrival time
-                        models.
-  -lambdamod LAMBDAMOD  Method to be used for modeling lambda: AC: has two
-                        options, poisson_fit/neg_bio_reg IAT: has three
-                        options, mean/loess/poly.
-  -verbose VERBOSE      0 to print nothing; >0 values for printing more
+                        * AC for arrival count models;
+                        * IAT for inter-arrival time models.
+  -lambdamod LAMBDAMOD  Method to be used for modeling lambda:
+                        * AC: has two options, poisson_fit/neg_bio_reg;
+                        * IAT: has three options, mean/loess/poly.
+  -verbose VERBOSE      0 to print nothing; > 0 values for printing more
                         information. Possible values: 0, 1, 2, 3. (integer)
 
 ```
@@ -142,7 +142,7 @@ optional arguments:
                         Location for raw data file. Default is "./res". Inside
                         this directory EV session files must be present. 
                         (string)
-  -verbose VERBOSE      0 to print nothing; >0 values for printing more
+  -verbose VERBOSE      0 to print nothing; > 0 values for printing more
                         information. Possible values: 0, 1, 2, 3. (integer)
 ```
  
