@@ -13,6 +13,7 @@
 #    : Please make sure that transactions file (real world raw data file) is present on root directory and
 #      has the following columns
 #       Column name     | Description                               | Data format
+#      -----------------+-------------------------------------------+-------------------------------
 #       Started         | Starting date and time of the EV session  | datetime (dd/mm/YYY HH:MM:SS)
 #       ConnectedTime   | Connection time of the EV session         | Hours (float)
 #       TotalEnergy     | Requested energy of the EV session        | kWh (float)
@@ -41,7 +42,7 @@ def main(args):
     from dir_gen import dir_create
     val = dir_create(folder_name=str(args['res_folder']))
     if not(val) :
-        print("Raw Data file not found at :" , config['res_folder'])
+        print("Raw Data file not found at: " , config['res_folder'])
         return
 
     # generate processed data
@@ -58,15 +59,15 @@ if __name__ == '__main__':
     parser.add_argument('-Slotmins', default=60,
                         help='Minutes in each timeslot (integer)')
     parser.add_argument('-create_plots', default=True,
-                        help='indicator for creating plots')
+                        help='Indicator for creating plots.')
     parser.add_argument('-Sessions_filename', default='transactions.csv',
-                        help='Name of the file contaning raw data. This file must be present in /res folder (str)')
+                        help='Name of the file contaning raw data. This file must be present in res_folder. (string)')
     parser.add_argument('-res_folder', default='res',
-                        help='Locaiton for raw data file. default is "/res" inside this directory'
-                             'EV sessions files must be present here (string)')
+                        help='Locaiton for raw data file. default is "./res" inside this directory'
+                             'EV sessions files must be present here. (string)')
     parser.add_argument('-verbose', default=1,
                         help='0 to print nothing; >0 values for printing more information. '
-                             'Possible values:0,1,2,3 (integer)')
+                             'Possible values: 0, 1, 2, 3. (integer)')
 
     args = parser.parse_args()
     main(vars(args))
