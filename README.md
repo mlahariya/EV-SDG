@@ -119,12 +119,12 @@ ChargePoint | Charging station | Categorical (str)
 #### Preprocessing
 
 We clean the data and prepare preprocessed data using [preprocess](preprocess) module. 
-The command line script `/SDG_preprocessing.py` can be used to create the preprocessed datasets. 
+The command line script `SDG_preprocessing.py` can be used to create the preprocessed datasets. 
 Running this script will generate a `slotted data' and a `preprocessed data file'. 
 
 * Save the raw data file in a folder
-* Run `/SDG_preprocessing.py` (supporting module `/preprocess` )
-* Please see [res/preprocess](/res/preprocess) for generated plots and pre processed data.
+* Run `SDG_preprocessing.py` (supporting module `./preprocess` )
+* Please see [./res/preprocess](./res/preprocess) for generated plots and pre processed data.
 
 ##### Command line arguments for SDG_preprocessing.py
 
@@ -146,11 +146,11 @@ optional arguments:
                         information. Possible values: 0, 1, 2, 3. (integer)
 ```
  
-IMP: Please do not forget to give the file name and file location while calling this script
+NOTE: Please do not forget to give the file name and file location while calling this script
 
-IMP: This file should be run before `/SDG_fit.py` (used for training models)
+NOTE: This file should be run before `./SDG_fit.py` (used for training models)
 
-IMP: Don't forget to install the packages in requirements.txt 
+NOTE: Don't forget to install the packages in requirements.txt 
 (`pip install -r requirements.txt`)
  
 #### Training SDG models
@@ -162,11 +162,11 @@ IMP: Don't forget to install the packages in requirements.txt
 optional arguments:
   -h, --help            Show this help message and exit.
   -model MODEL          Modeling method to be used for modeling arrival times:
-                        AC for arrival count models IAT for inter-arrival time
-                        models.
-  -lambdamod LAMBDAMOD  Method to be used for modeling lambda: AC: has two
-                        options, poisson_fit/neg_bio_reg IAT: has three
-                        options, mean/loess/poly.
-  -verbose VERBOSE      0 to print nothing; >0 values for printing more
+                        * AC for arrival count model;
+                        * IAT for inter-arrival time model.
+  -lambdamod LAMBDAMOD  Method to be used for modeling lambda, depending on MODEL: 
+                        * AC: has two options, poisson_fit/neg_bio_reg;
+                        * IAT: has three options, mean/loess/poly.
+  -verbose VERBOSE      0 to print nothing; > 0 values for printing more
                         information. Possible values: 0, 1, 2, 3. (integer)
 ```
