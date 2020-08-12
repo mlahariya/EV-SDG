@@ -47,7 +47,7 @@ Developed at [UGent, IDlab](https://www.ugent.be/ea/idlab/en).
 
 ### EV sessions data generation
 A sample of EV sessions data can be generated using the python script `SDG_sample_generate.py`. Generate_sample() can be used 
-to generate and save samples to [/res/generated samples](/res/generated samples). 
+to generate and save samples to [/res/generated samples](res\generated samples). 
 
 
 ```python
@@ -120,11 +120,11 @@ ChargePoint | Charging station | Categorical (str)
 
 We clean the data and prepare preprocessed data using [preprocess](preprocess) module. 
 The command line script `SDG_preprocessing.py` can be used to create the preprocessed datasets. 
-Running this script will generate a `slotted data' and a `preprocessed data file'. 
+Running this script will generate a 'slotted data' and a 'preprocessed data' file. 
 
 * Save the raw data file in a folder
 * Run `SDG_preprocessing.py` (supporting module `./preprocess` )
-* Please see [./res/preprocess](./res/preprocess) for generated plots and pre processed data.
+* Please see [./res/preprocess](res/preprocess) for generated plots and pre processed data.
 
 ##### Command line arguments for SDG_preprocessing.py
 
