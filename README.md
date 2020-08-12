@@ -13,8 +13,8 @@ Proceedings of the Eleventh ACM International Conference on Future Energy System
 
 <a id="1">[2]</a> 
 Lahariya, Manu and Benoit, Dries and Develder, Chris (2020). 
-Title
-Publication
+Synthetic data generator for electric vehicle charging sessions: Modeling and evaluation using real-world data
+Energies 2020, 13
 
 #### Citation
 ```
@@ -28,15 +28,15 @@ author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
     pages = {406–407}
 }
 
-@inproceedings{,
-author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
-    title = {},
-    year = {},
-    isbn = {},
-    publisher = {},
-    doi = {},
-    booktitle = {},
-    pages = {}
+@article{,
+    author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
+    year = {2020},
+    month = {08},
+    pages = {},
+    title = {Synthetic data generator for electric vehicle charging sessions: Modeling and evaluation using real-world data},
+    volume = {13},
+    journal = {Energies},
+    doi = {}
 }
 ```
 <img src="https://idlab.technology/assets/img/logo.jpg" width="100"> <img src="https://styleguide.ugent.be/files/uploads/logo_UGent_EN_RGB_2400_kleur_witbg.png" width="50">
