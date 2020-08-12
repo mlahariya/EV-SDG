@@ -61,7 +61,7 @@ generate_sample(AM=AM, MMc=MMc, MMe=MMe,
 
 AM, MMc and MMe are the SDG models that needs to be passed as inputs. 
 Models fitted on a real world data will be used as default SDG models for generation.
-These models are saved in [modeling/default_models/saved_models]([https://github.com/mlahariya/EV-SDG/tree/master/modeling/default_models/saved_models]). 
+These models are saved in [modeling/default_models/saved_models](https://github.com/mlahariya/EV-SDG/tree/master/modeling/default_models/saved_models). 
 Generated EV sessions data will be saved on the res/generated_samples folder. Please refer to  `SDG_sample_generate.py` for further details. 
 
 ##### Command line arguments for SDG_sample_generate.py
