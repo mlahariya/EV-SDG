@@ -9,12 +9,12 @@ This repository has
 <a id="1">[1]</a> 
 Lahariya, Manu and Benoit, Dries and Develder, Chris (2020). 
 Defining a Synthetic Data Generator for Realistic Electric Vehicle Charging Sessions. 
-Proceedings of the Eleventh ACM International Conference on Future Energy Systems, 406–407.
+Proceedings of the Eleventh ACM International Conference on Future Energy Systems, pp. 406–407.
 
 <a id="1">[2]</a> 
 Lahariya, Manu and Benoit, Dries and Develder, Chris (2020). 
-Synthetic data generator for electric vehicle charging sessions: Modeling and evaluation using real-world data
-Energies 2020, 13
+Synthetic data generator for electric vehicle charging sessions: Modeling and evaluation using real-world data.
+Energies 2020, vol. 13
 
 #### Citation
 ```
