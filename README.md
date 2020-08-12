@@ -14,7 +14,7 @@ Proceedings of the Eleventh ACM International Conference on Future Energy System
 <a id="1">[2]</a> 
 Lahariya, Manu and Benoit, Dries and Develder, Chris (2020). 
 Synthetic data generator for electric vehicle charging sessions: Modeling and evaluation using real-world data.
-Energies 2020, vol. 13
+Energies 2020, vol. 13.
 
 #### Citation
 ```
