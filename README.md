@@ -47,7 +47,7 @@ Developed at [UGent, IDlab](https://www.ugent.be/ea/idlab/en).
 
 ### EV sessions data generation
 A sample of EV sessions data can be generated using the python script `SDG_sample_generate.py`. Generate_sample() can be used 
-to generate and save samples to [/res/generated samples](res\generated samples). 
+to generate and save samples to /res/generated samples. 
 
 
 ```python
@@ -61,8 +61,8 @@ generate_sample(AM=AM, MMc=MMc, MMe=MMe,
 
 AM, MMc and MMe are the SDG models that needs to be passed as inputs. 
 Models fitted on a real world data will be used as default SDG models for generation.
-These models are saved in [modeling/default_models/saved_models]([modeling/default_models/saved_models]). 
-Generated EV sessions data will be saved on the [res/generated_samples]([res/generated_samples]) folder. Please refer to  `SDG_sample_generate.py` for further details. 
+These models are saved in [modeling/default_models/saved_models]([https://github.com/mlahariya/EV-SDG/tree/master/modeling/default_models/saved_models]). 
+Generated EV sessions data will be saved on the res/generated_samples folder. Please refer to  `SDG_sample_generate.py` for further details. 
 
 ##### Command line arguments for SDG_sample_generate.py
 
@@ -124,7 +124,7 @@ Running this script will generate a 'slotted data' and a 'preprocessed data' fil
 
 * Save the raw data file in a folder
 * Run `SDG_preprocessing.py` (supporting module `./preprocess` )
-* Please see [./res/preprocess](res/preprocess) for generated plots and pre processed data.
+* Please see /res/preprocess for generated plots and pre processed data.
 
 ##### Command line arguments for SDG_preprocessing.py
 
