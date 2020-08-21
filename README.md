@@ -1,4 +1,4 @@
-# EV-SDG
+﻿# EV-SDG
 Electric vehicle (EV) - Synthetic data generator(SDG): Parametric models to generate synthetic samples of EV sessions data.
  
 This repository has
@@ -28,15 +28,16 @@ author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
     pages = {406–407}
 }
 
-@article{,
-    author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
-    year = {2020},
-    month = {08},
-    pages = {},
+@article{lahariya2020synthetic,
     title = {Synthetic data generator for electric vehicle charging sessions: Modeling and evaluation using real-world data},
-    volume = {13},
     journal = {Energies},
-    doi = {}
+    author = {Lahariya, Manu and Benoit, Dries and Develder, Chris},
+    volume={13},
+    number={16},
+    pages={4211},
+    year={2020},
+    doi = {10.3390/en13164211},
+    publisher={Multidisciplinary Digital Publishing Institute}
 }
 ```
 <img src="https://idlab.technology/assets/img/logo.jpg" width="100"> <img src="https://styleguide.ugent.be/files/uploads/logo_UGent_EN_RGB_2400_kleur_witbg.png" width="50">
